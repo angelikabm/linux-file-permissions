@@ -9,7 +9,7 @@ The research team at my organization required updates to file and directory perm
 
 I first used Linux commands to examine the current permission settings for files and directories within the file system.
 <p align="left">
-<img src="https://i.imgur.com/PYKNCh8.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/PYKNCh8.png" height="80%" width="80%" alt="Reviewing File and Directory Permissions"/>
 <br />
   
 The first line of the screenshot shows the command I executed, while the remaining lines display the output. I used the ls -la command to generate a detailed listing of all contents in the projects directory, including hidden files. The output revealed one directory named drafts, one hidden file named .project_x.txt, and four additional project files. The 10-character string shown in the first column represents the permissions assigned to each file or directory.
@@ -32,7 +32,7 @@ For example, the permissions for project_t.txt are -rw-rw-r--. The leading hyphe
 
 The organization determined that users classified as other should not have write access to any project files. Based on the permissions review, I identified project_k.txt as a file that required adjustment.
 <p align="left">
-<img src="https://i.imgur.com/DTGgK0O.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/DTGgK0O.png" height="80%" width="80%" alt="Modifying File Permissions"/>
 <br />
   
 Using the chmod command, I removed write permissions for other. After making this change, I ran ls -la again to confirm that the permissions were updated correctly.
@@ -41,7 +41,7 @@ Using the chmod command, I removed write permissions for other. After making thi
 
 The research team recently archived project_x.txt and wanted to prevent all users from modifying it, while still allowing the user and group to retain read access.
 <p align="left">
-<img src="https://i.imgur.com/vsfLL0P.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/vsfLL0P.png" height="80%" width="80%" alt="Updating Permissions on a Hidden File"/>
 <br />
   
 Since .project_x.txt begins with a period, it is considered a hidden file. I removed write permissions from both the user and the group and ensured the group had read access. This was accomplished by removing write permissions with u-w and g-w, and adding read permissions for the group using g+r. I verified the changes using ls -la.
@@ -50,7 +50,7 @@ Since .project_x.txt begins with a period, it is considered a hidden file. I rem
 
 The organization required that only the researcher2 user have access to the drafts directory and its contents. This meant that execute permissions needed to be restricted so no other users or groups could access the directory.
 <p align="left">
-<img src="https://i.imgur.com/cM1xFw0.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/cM1xFw0.png" height="80%" width="80%" alt="Changing Directory Permissions"/>
 <br />
   
 After reviewing the existing permissions, I used the chmod command to remove execute permissions from the group. The researcher2 user already had the appropriate access, so no additional permissions were added. The updated permission listing confirmed that only researcher2 retained execute privileges.
