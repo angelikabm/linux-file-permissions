@@ -1,4 +1,4 @@
-<h1>File Permissions in Linux</h1>
+<h1>📁 File Permissions in Linux</h1>
 
 <h2>Project Description</h2>
 The research team at my organization required updates to file and directory permissions within the projects directory to ensure access levels aligned with authorization requirements. Reviewing and correcting these permissions was necessary to maintain system security. To complete this task, I performed the following steps:
@@ -8,7 +8,7 @@ The research team at my organization required updates to file and directory perm
 <h2>Reviewing File and Directory Permissions</h2>
 
 I first used Linux commands to examine the current permission settings for files and directories within the file system.
-<p align="left">
+<p align="center">
 <img src="https://i.imgur.com/PYKNCh8.png" height="80%" width="80%" alt="Reviewing File and Directory Permissions"/>
 <br />
   
@@ -31,7 +31,7 @@ For example, the permissions for project_t.txt are -rw-rw-r--. The leading hyphe
 <h2>Modifying File Permissions</h2>
 
 The organization determined that users classified as other should not have write access to any project files. Based on the permissions review, I identified project_k.txt as a file that required adjustment.
-<p align="left">
+<p align="center">
 <img src="https://i.imgur.com/DTGgK0O.png" height="80%" width="80%" alt="Modifying File Permissions"/>
 <br />
   
@@ -40,7 +40,7 @@ Using the chmod command, I removed write permissions for other. After making thi
 <h2>Updating Permissions on a Hidden File</h2>
 
 The research team recently archived project_x.txt and wanted to prevent all users from modifying it, while still allowing the user and group to retain read access.
-<p align="left">
+<p align="center">
 <img src="https://i.imgur.com/vsfLL0P.png" height="80%" width="80%" alt="Updating Permissions on a Hidden File"/>
 <br />
   
@@ -49,7 +49,7 @@ Since .project_x.txt begins with a period, it is considered a hidden file. I rem
 <h2>Changing Directory Permissions</h2>
 
 The organization required that only the researcher2 user have access to the drafts directory and its contents. This meant that execute permissions needed to be restricted so no other users or groups could access the directory.
-<p align="left">
+<p align="center">
 <img src="https://i.imgur.com/cM1xFw0.png" height="80%" width="80%" alt="Changing Directory Permissions"/>
 <br />
   
