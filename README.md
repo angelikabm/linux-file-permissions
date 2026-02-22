@@ -1,7 +1,7 @@
 <h1>📁 File Permissions in Linux</h1>
 
 <h2>Project Description</h2>
-The research team at my organization required updates to file and directory permissions within the projects directory to ensure access levels aligned with authorization requirements. Reviewing and correcting these permissions was necessary to maintain system security. To complete this task, I performed the following steps:
+The research team at my organization needs to update the file permissions for certain files and directories within the projects directory. The permissions do not currently reflect the level of authorization that should be given. Checking and updating these permissions will help keep their system secure. To complete this task, I performed the following tasks:
 <br />
 
 
